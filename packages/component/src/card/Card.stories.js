@@ -1,6 +1,7 @@
-import { CardComponent } from "./Card";
+import { CardComponent } from './Card';
+
 export default {
-  title: "Components/Card",
+  title: 'Components/Card',
   argTypes: {
     image: {
       control: { type: 'text' },
@@ -16,17 +17,14 @@ export default {
     },
   }
 };
+
 const PrimaryTemplate = ({ image, headline, content, link }) => `
 <in-card>
-<img
-  slot="header"
-  src="${image}"
-/>
-<h4 slot="header">${headline}</h4>
-<p slot="content">${content}</p>
-<a href="#" slot="footer">${link}</a>
+  <img slot="header" src="${image}"> 
+  <h4 slot="header">${headline}</h4>
+  <p slot="content">${content}</p>
+  <a href="#" slot="footer">${link}</a>
 </in-card>`;
-
 
 export const ImageCard = PrimaryTemplate.bind({});
 ImageCard.args = {
